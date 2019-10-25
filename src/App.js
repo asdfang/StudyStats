@@ -142,7 +142,7 @@ const Graph = ({state}) => {
     const assignments = state.classes[i].assignments;
     for (let j = 0; j < assignments.length; j += 1) {
       const assignment = assignments[j];
-      if (assignment.week == week){
+      if (assignment.week === week){
         if (assignment.average_time_spent > maxHours){
           maxHours = assignment.average_time_spent;
           dueSoon = state.classes[i].title + " " + assignment.title;
@@ -152,8 +152,8 @@ const Graph = ({state}) => {
     }
   }
   for (let i = 0; i < data.length; i += 1){
-    if (data[i][0] == dueSoon){
-      data[i][2] = 'red';
+    if (data[i][0] === dueSoon){
+      data[i][2] = 'purple';
     }
   }
   return (
