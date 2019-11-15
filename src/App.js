@@ -152,7 +152,7 @@ const Graph = ({state}) => {
     }
   }
   for (let i = 0; i < data.length; i += 1){
-    if (data[i][0] === dueSoon){
+    if (data[i][0] === dueSoooon){
       data[i][2] = 'yellow';
     }
   }
