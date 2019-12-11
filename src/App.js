@@ -66,13 +66,13 @@ const CurrClasses = ({state}) => {
                 currClass.assignments.map(currAssignment =>
 
                 <React.Fragment key={currAssignment.title}>
-                <Button onClick={() => handleShow(currClass, currAssignment)}>{currClass.title} - {currAssignment.title}</Button>
+                <Button data-cy="assignmentButton" onClick={() => handleShow(currClass, currAssignment)}>{currClass.title} - {currAssignment.title}</Button>
                 <br />
                 </React.Fragment>
               ))}
             </ButtonGroup>
 
-            <Modal show={showLog} onHide={handleClose}>
+            <Modal data-cy="modal" show={showLog} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title>Enter hours spent to complete this assignment:</Modal.Title>
               </Modal.Header>
